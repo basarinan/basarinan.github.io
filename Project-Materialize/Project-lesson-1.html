@@ -37,6 +37,9 @@
   </style>
 </head>
 <body>
+    
+
+    
 
   <!-- navbar -->
   <header>
@@ -47,17 +50,26 @@
                   <i class="material-icons">menu</i>
               </a>
               <ul class="right hide-on-med-and-down">
-                  <li><a href="#photos">Photos</a></li>
+                  <li><a href =#photos>About Me</a></li>
+                  
+                 
+                  
+                      
+                  
+                        
+
+                   
                   <li><a href="#services">Services</a></li>
                   <li><a href="#contact">Contacts</a></li>
-                  <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="This is Instagram">
+                  <li><a href="https://www.instagram.com/basar_gokberkinan/" class="tooltipped btn-floating btn-small indigo darken-4" id = "twittericon"data-tooltip="This is Instagram">
                       <i class="fab fa-instagram"></i>
                   </a></li>
-                  <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="This is Facebook">
-                    <i class="fab fa-facebook"></i>
+                  
+
                 </a></li>
-                <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="This is Twitter">
+                <li><a href="https://twitter.com/basarinan04" class="tooltipped btn-floating btn-small indigo darken-4"  data-tooltip="This is Twitter">
                     <i class="fab fa-twitter"></i>
+                    
                 </a></li>
 
               </ul>
@@ -70,39 +82,54 @@
           </div>
       </nav>
 
+      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Projects</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="Code.html">Code</a></li>
+    <li><a href="CAS.html"><i class = "material-icons">write</i>CAS</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul>
+
   </header>
+  
+
+
 
   <!-- photo / grid -->
   <section class="container" id="photos">
       <div class="row">
           <div class="col s12 l4">
-              <img src="img/portrait.jpg" alt="" class="responsive-img materialboxed">
+              <img src="img/ucc.jpg" alt="" class="responsive-img materialboxed">
           </div>
           <div class="col s12 l6 offset-l1">
-              <h2 class="indigo-text text-darken-4">Portraits</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
+              <h2 class="indigo-text text-darken-4">Info about High School</h2>
+              <p>My High school career has been rather hectic over the years. I have spent each and every year during high school in different locations. To summarize I started high school in Saudi Arabia, moved onto Italy for my sophomore year and finally enrolled to UCC for the final 2 years of my high school career. My first year in UCC was spent in Turkey where I did remote learning and my second was spent physically in Toronto. UCC is an IB school that seeks the utmost academic success of its students and I have been very content with the course of my learning.</p>
           </div>
       </div>
   </section>
   <section class="container section" id="photos">
     <div class="row">
         <div class="col s12 l4 push-l7 offset-l1">
-            <img src="img/city.jpg" alt="" class="responsive-img materialboxed">
+            <img src="img/chess.jpg" alt="" class="responsive-img materialboxed">
         </div>
         <div class="col s12 l6 pull-l5 right-align offset-l1">
-            <h2 class="indigo-text text-darken-4">City Scapes</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
+            <h2 class="indigo-text text-darken-4">Hobbies</h2>
+            <p>I like to think of myself as a person who has multi-faceted interests. I am a sportive person who enjoys playing basketball in a competitive way while also engaging in activities such as saxophone playing and chess to develop my intellectual side</p>
         </div>
     </div>
 </section>
 <section class="container section scrollspy" id="photos">
     <div class="row">
         <div class="col s12 l4">
-            <img src="img/nature.jpg" alt="" class="responsive-img materialboxed">
+            <img src="img/intellect.jpg" alt="" class="responsive-img materialboxed">
         </div>
         <div class="col s12 l6 offset-l1">
-            <h2 class="indigo-text text-darken-4">Nature</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
+            <h2 class="indigo-text text-darken-4">Aspirations</h2>
+            <p>I hope to attend a prestigious university where I can also continue to puruse my extra-curricular passions. I would like to have the opportunity to play basketball in university and give myself the best chance at enhanching my post-university life in whichever carrer I may choose to pursue.</p>
         </div>
     </div>
 </section>
@@ -118,30 +145,50 @@
   <section class="container section scrollspy" id="services">
       <div class="row">
           <div class="col s12 l4">
-              <h2 class="indigo-text text-darken-4">What I do...</h2>
+              <h2 class="indigo-text text-darken-4">IB Info</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
               
           </div>
           <div class="col s12 l6 offset-l2">
               <ul class="tabs">
                   <li class="tab col s6">
-                      <a href="#photography" class="indigo-text text-darken-4">Photography</a>
+                      <a href="#Courses" class="indigo-text text-darken-4">Courses</a>
+                      
                       
                   </li>
                   <li class="tab col s6">
-                    <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+                    <a href="#Results" class="indigo-text text-darken-4">Results</a>
 
                   </li>
 
 
               </ul>
-              <div class="col s12" id="photography">
-                  <p class="flow-text indigo-text text-darken-4">PHOTOGRAPHY</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
+              <div class="col s12" id="Courses">
+                  <p class="flow-text indigo-text text-darken-4">IB Courses</p>
+                  <p>Below are the courses I took in High school for IB. Please click the Results button to view my accomplishments </p>
+                  <div class="container" id = "#high_level">
+                      <h6 class = "blue-text text-darken-3 style = "text-decoration:underline;">High Level Courses:</h2>
+                      <ul>
+                          <li>Economics</li>
+                          <li>Mathematics Approaches and Analysis</li>
+                          <li>Language and Literature</li>
+                      </ul>
+                      
+                      
+                    </div>
+                    <div class="container" id = "#standard_level">
+                        <h6 class = "blue-text text-darken-6">Standard Level Courses</h2>
+                        <ul>
+                            <li>Physics</li>
+                            <li>Computer Sciences</li>
+                            <li>French</li>
+                        </ul>
+                        
+                    </div>
               </div>
-              <div class="col s12" id="editing">
-                <p class="flow-text indigo-text text-darken-4">EDITING</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam</p>
+              <div class="col s12" id="Results">
+                <p class="flow-text indigo-text text-darken-4">Results</p>
+                <p>Listed below are the results for my IB program</p>
             </div>
           </div>
       </div>
@@ -153,7 +200,7 @@
   <!-- parallax -->
   <div class="parallax-container">
     <div class="parallax">
-        <img src="img/stars.jpg" alt="" class= "responsive-img">
+        <img src="img/school.jpg" alt="" class= "responsive-img">
     </div>
 </div>
 
@@ -206,6 +253,41 @@
     </div>
   </section>
 
+  <!--Twitter Timeline-->
+  <a class="twitter-timeline" href="https://twitter.com/basarinan04?ref_src=twsrc%5Etfw">Tweets by basarinan04</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <blockquote class="twitter-tweet"><p lang="und" dir="ltr">Hi</p>&mdash; Basar (@basarinan04) <a href="https://twitter.com/basarinan04/status/1359482666857463808?ref_src=twsrc%5Etfw">February 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!--Modal-->
+
+   <!-- Modal Trigger -->
+   
+   
+
+   <!-- Modal Structure -->
+   <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal">
+     <div class="modal-content">
+
+       <h4>Sign Inr</h4>
+       <form id = "login"></form>
+       
+       <input type="text" id = "username">
+       <label for="username">Username</label autocomplete = "required">
+
+        <input type="text" id = "pword">
+        <label for="pword">Password</label>
+     </div>
+     <button class = "blue btn-flat" id = "sign_in">Sign In</button>
+     <div class="modal-footer">
+        <a href="#!" class="waves-effect waves-indigo btn-flat" >Terms and Conditions</a>
+        
+    
+       <a href="#!" class="modal-close waves-effect waves-green btn-flat" data-tooltip="I agree to the Terms and Conditions">Agree</a>
+
+     </div>
+   </div>
+
   <!-- footer -->
   <footer class="page-footer grey darken-3">
       <div class="container">
@@ -232,12 +314,14 @@
           <div class="container center-align">&copy; 2020 Photo Ninja</div>
       </div>
   </footer>
-
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
     $(document).ready(function(){
+    $('.dropdown-trigger').dropdown();
+    
+    
     $('.sidenav').sidenav();
     $('.materialboxed').materialbox()
     $('.parallax').parallax();
@@ -248,7 +332,34 @@
         });
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
+
+    document.addEventListener('DOMContentLoaded', function() {
+    	
+			var elems = document.querySelectorAll('.modal');
+			var instances = M.Modal.init(elems, options);
+		});
+
+    
+
+   
+
+    
     });
+
+    const twitter_icon = document.getElementById()
+    
+
+   
+
+   
+    
+    
+        
+        
+  
+
+    
   </script>
+  <script></script>
 </body>
 </html>

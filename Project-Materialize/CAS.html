@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Photo Ninja</title>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper indigo">
+
+        <div class="container">
+            
+            <a href="" class="brand-logo">Photo Ninja</a>
+            <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                
+                
+               
+                
+                    
+                
+                      
+
+                 
+               
+               
+                <li><a href="Project-lesson-1.html"></a>Home</li>
+                <li><a href="https://www.instagram.com/basar_gokberkinan/" class="tooltipped btn-floating btn-small indigo darken-4" id = "twittericon"data-tooltip="This is Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a></li>
+                
+
+              </a></li>
+              <li><a href="https://twitter.com/basarinan04" class="tooltipped btn-floating btn-small indigo darken-4"  data-tooltip="This is Twitter">
+                  <i class="fab fa-twitter"></i>
+                  
+              </a></li>
+
+            </ul>
+            <ul class="sidenav grey lighten-2" id ="mobile-menu">
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contacts</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Projects</a>
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="Code.html">Code</a></li>
+  <li><a href="CAS.html"><i class = "material-icons">write</i>CAS</a></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="#!">three</a></li>
+  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+</ul>
+
+</header>
+
+
+<!--Input Form Structure-->
+
+
+
+<div class="container">
+    <form id = "contact_me_form">
+        <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            
+            <input type="email" id ="email_input">
+            <label for="email_input">Your Email</label>
+            
+            
+        </div>
+        <div class="input-field">
+            <i class="material-icons prefix">message</i>
+            
+            <textarea id="cas_idea" class="materialize-textarea" ></textarea>
+            <label for="cas_idea">Your CAS Idea</label>
+            
+            
+        </div>
+        
+       
+        <div class="input-field center">
+            <button class="btn">Submit</button>
+        </div>
+    </form>
+
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<script>
+const contact_me_form = document.getElementById("contact_me_form")    
+const email_input = document.getElementById('email_input')
+const cas_idea = document.getElementById('cas_idea')
+console.log(contact_me_form)
+console.log(email_input)
+console.log(cas_idea)
+
+contact_me_form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    var email_input1 = email_input.value
+    
+    var message_input = cas_idea.value
+    window.open('basar.inan@ucc.on.ca?subject=Tasks&body=' + email_input + message_input)
+})
+     //const contact_me_form = document.getElementById("contact_me_form")
+    // const email_input = document.getElementById("email_input")
+    // const cas_idea = document.getElementById("cas_idea")
+    // contact_me_form.addEventListener("submit", function (e) {
+    // e.preventDefault()
+    // var email_input = email_input.value
+    // var message_input = cas_idea.value
+    
+    
+    // window.open('mailto: basar.inan@ucc.on.ca?subject=Tasks&body=Dear Basar, %0D%0A I am ' + email_input + '. %0D%0A I think that you should ' + message_input +  '. %0D%0A Thank you!');
+    // })
+</script>
+
+
+
+
+
+</body>
+</html>

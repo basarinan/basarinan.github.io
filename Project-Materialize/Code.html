@@ -1,0 +1,250 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Photo Ninja</title>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper indigo">
+
+        <div class="container">
+            
+            <a href="" class="brand-logo">Photo Ninja</a>
+            <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                
+                
+               
+                
+                    
+                
+                      
+
+                 
+               
+               
+                <li><a href="Project-lesson-1.html"></a>Home</li>
+                <li><a href="https://www.instagram.com/basar_gokberkinan/" class="tooltipped btn-floating btn-small indigo darken-4" id = "twittericon"data-tooltip="This is Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a></li>
+                
+
+              </a></li>
+              <li><a href="https://twitter.com/basarinan04" class="tooltipped btn-floating btn-small indigo darken-4"  data-tooltip="This is Twitter">
+                  <i class="fab fa-twitter"></i>
+                  
+              </a></li>
+
+            </ul>
+            <ul class="sidenav grey lighten-2" id ="mobile-menu">
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contacts</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Projects</a>
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="Code.html">Code</a></li>
+  <li><a href="CAS.html"><i class = "material-icons">write</i>CAS</a></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="#!">three</a></li>
+  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+</ul>
+
+</header>
+
+
+</head>
+<body>
+  <h1>CODE:</h1>
+
+  <h4>Below are some of the Codes I have completed during my DP CS studies</h4>
+
+  <div class="container">
+    <div class = "container" >
+		
+      
+      
+      <div class="row" id = "elementDisplay">
+        
+  
+  
+      </div>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+
+
+
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyCBvxfQxkzA4Z9_FFBHH5nFItQmF5M5ACg",
+    authDomain: "project-database-4fc60.firebaseapp.com",
+    databaseURL: "https://project-database-4fc60-default-rtdb.firebaseio.com",
+    projectId: "project-database-4fc60",
+    storageBucket: "project-database-4fc60.appspot.com",
+    messagingSenderId: "145330664958",
+    appId: "1:145330664958:web:19dcd1d0620318ffb8fcaf"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+  database = firebase.database()
+
+
+  
+
+
+
+
+</script>
+
+
+<script>
+  var elements =
+              [
+                    {
+                      "Language": "Python",
+                      "Problem": "Circle Problem",
+                      "link": "https://github.com/basarinan/DP_CS_Codee/blob/master/Python_Contest_Problems/CircleProblem.py"
+                      
+                    },
+                    {
+                      "Language": "Python",
+                      "Problem": "minmax",
+                      "link":"https://github.com/basarinan/DP_CS_Codee/blob/master/Tools%20Files/minmax.py"
+              
+                    },
+
+                    {
+                      "Language": "Python",
+                      "Problem":"IsEven",
+                      "link":"https://github.com/basarinan/DP_CS_Codee/blob/master/Tools%20Files/isEvennn.py"
+                    },
+                    {
+                      "Language": "Python",
+                      "Problem":"centeredValue",
+                      "link":"https://github.com/basarinan/DP_CS_Codee/blob/master/Tools%20Files/centeredaverage.py"
+
+
+
+                    }
+                  ]
+                
+</script>
+
+<script>
+
+x = database.ref("/elements/").set({
+   		elements
+   		//does something that accesses and updates name from the database
+   		
+  	}).then((val) => {
+  		
+  		firebase.database().ref('/elements/elements/').once('value').then((snapshot) => {
+
+  		});
+  	}).then((snapshot) => {
+        // For making all the icons on proceed page and all the cards
+        dataDB =  database.ref('/elements/elements/').on(
+          'value',(snapshot) => {
+    
+    data=snapshot.val()
+
+    dataSTR = ""
+
+    for (i = 0; i < data.length; i = i + 1) {
+
+        dataSTR = dataSTR + createCard(data[i])
+    
+    }
+
+    elementDisplay.innerHTML = dataSTR
+
+    })
+});
+  	// dataDB =  database.ref('/elements/').on('value',(snapshot) => {
+			
+		// 	data =snapshot.val()
+      
+		// 	console.log(data)
+
+		// 	dataSTR = ""
+		// 	for (i = 0; i < data.length; i = i + 1) {
+
+		// 		dataSTR = dataSTR + createCard(data[i])
+				
+		// 	}
+		// 	elementDisplay.innerHTML = dataSTR
+
+			
+		// });
+
+
+    // 	function demoIdea(data) {
+
+    // 		//What it does --> Creates a stirng version of data
+    // 		//Return Type --> String
+    // 		//Parameter --> A JSON object
+    // 		//Name --> stringify
+    // 		//Static --> It is not invoked with an instance - JSON is the package where stringify lives. 
+    // 		dataSTR = JSON.stringify(data);
+    // 		console.log(dataSTR)
+    // 		dataJSON = JSON.parse(dataSTR);
+    // 		console.log("*****")
+    // 		console.log(dataJSON)
+
+    // 	}
+
+
+    	//Grabbed the object on the screen I want to add my cards. 
+    	const elementDisplay = document.getElementById("elementDisplay")
+
+
+		function createCard(elemOBJ) {
+
+				console.log(elemOBJ)
+				const card = ` 	
+					<div class="col s12 m6 l4">
+						<div class="card small blue-grey darken-1">
+							<div class="card-content white-text">
+			 					<span class="card-title">${elemOBJ["Language"]}: ${elemOBJ["Problem"]}</span>
+			  					<p>${elemOBJ["link"]}</p>
+							</div>
+							<div class="card-action">
+								<a href='${elemOBJ["link"]}'>This is a link</a>
+								<a href="#">This is a link</a>
+							</div>
+						</div>
+				</div>
+				`
+
+				return card
+			}    	
+</script>
+
+
+    
+</body>
+</html>
