@@ -1,4 +1,4 @@
-const signin = document.getElementById("login_form")
+const signup = document.getElementById("button")
 
 
 
@@ -8,7 +8,7 @@ function signIn(u, p) {
     // Signed in
 
     var user = userCredential.user;
-    window.location.href="login.html"
+    window.location= "login.html"
     // ...
   })
   .catch((error) => {
@@ -18,13 +18,13 @@ function signIn(u, p) {
 }
 
 
-signIn.addEventListener('submit',(e) => {
+
+signup.addEventListener('click', (e) => {
   e.preventDefault()
 	a = document.getElementById("user_name").value
-	b = document.getElementById("user_password").value
+b = document.getElementById("user_password").value
 	signIn(a,b)
 })
-
 
 
 

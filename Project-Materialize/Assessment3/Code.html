@@ -156,9 +156,9 @@
 
 <script>
 
-x = database.ref("/elements/").set({
+y = database.ref("/elements/").set({
    		elements
-   		//does something that accesses and updates name from the database
+   		//acesses the database and makes changes according to the list that has been created under elements and updates it.
    		
   	}).then((val) => {
   		
@@ -184,41 +184,10 @@ x = database.ref("/elements/").set({
 
     })
 });
-  	// dataDB =  database.ref('/elements/').on('value',(snapshot) => {
-			
-		// 	data =snapshot.val()
-      
-		// 	console.log(data)
-
-		// 	dataSTR = ""
-		// 	for (i = 0; i < data.length; i = i + 1) {
-
-		// 		dataSTR = dataSTR + createCard(data[i])
-				
-		// 	}
-		// 	elementDisplay.innerHTML = dataSTR
-
-			
-		// });
+  	
 
 
-    // 	function demoIdea(data) {
-
-    // 		//What it does --> Creates a stirng version of data
-    // 		//Return Type --> String
-    // 		//Parameter --> A JSON object
-    // 		//Name --> stringify
-    // 		//Static --> It is not invoked with an instance - JSON is the package where stringify lives. 
-    // 		dataSTR = JSON.stringify(data);
-    // 		console.log(dataSTR)
-    // 		dataJSON = JSON.parse(dataSTR);
-    // 		console.log("*****")
-    // 		console.log(dataJSON)
-
-    // 	}
-
-
-    	//Grabbed the object on the screen I want to add my cards. 
+    	 
     	const elementDisplay = document.getElementById("elementDisplay")
 
 
