@@ -10,6 +10,8 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <title>Photo Ninja</title>
+
+
   <style>
       header{
           background: url(img/man.jpg);
@@ -61,6 +63,8 @@
                    
                   <li><a href="#services">Services</a></li>
                   <li><a href="#contact">Contacts</a></li>
+                  <li><a href="#login_modal" id = "login_nav" class = "modal-trigger">Login</a></li>
+                  <li><a href="Project-lesson-1.html" id = "logout_nav" style = "display:none">Logout</a></li>
                   <li><a href="https://www.instagram.com/basar_gokberkinan/" class="tooltipped btn-floating btn-small indigo darken-4" id = "twittericon"data-tooltip="This is Instagram">
                       <i class="fab fa-instagram"></i>
                   </a></li>
@@ -83,6 +87,25 @@
       </nav>
 
       <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Projects</a>
+      <!--Modal Structure-->
+      <div id="login_modal" class="modal">
+		<div class="modal-content">
+			<form id="login-form" autocomplete = "off">
+				<div class="input-field">
+					<input type="email" id="user_name" autocomplete="" required />
+					<label for="user_name">User Name</label>
+				</div>
+				<div class="input-field">
+					<input type="password" id="user_password" autocomplete="" required />
+					<label for="user_password">Password</label>
+				</div>
+				
+				<button class="btn yellow darken-2 z-depth-0" id ="button">Sign Up</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Create New User</a>
+		</div>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
@@ -262,14 +285,14 @@
    
    
 
-   <!-- Modal Structure -->
+<!--    Modal Structure
    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
    <!-- Modal Structure -->
    <div id="modal1" class="modal">
      <div class="modal-content">
 
-       <h4>Sign Inr</h4>
+       <h4>Sign In</h4>
        <form id = "login"></form>
        
        <input type="text" id = "username">
@@ -286,7 +309,7 @@
        <a href="#!" class="modal-close waves-effect waves-green btn-flat" data-tooltip="I agree to the Terms and Conditions">Agree</a>
 
      </div>
-   </div>
+   </div> -->
 
   <!-- footer -->
   <footer class="page-footer grey darken-3">
@@ -313,11 +336,33 @@
       <div class="footer-copyright grey darken-4">
           <div class="container center-align">&copy; 2020 Photo Ninja</div>
       </div>
+      
   </footer>
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+ 
+ 
+ <!--Firebase Database-->
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCBvxfQxkzA4Z9_FFBHH5nFItQmF5M5ACg",
+      authDomain: "project-database-4fc60.firebaseapp.com",
+      databaseURL: "https://project-database-4fc60-default-rtdb.firebaseio.com",
+      projectId: "project-database-4fc60",
+      storageBucket: "project-database-4fc60.appspot.com",
+      messagingSenderId: "145330664958",
+      appId: "1:145330664958:web:19dcd1d0620318ffb8fcaf"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    database = firebase.database()
+    
+  
     $(document).ready(function(){
     $('.dropdown-trigger').dropdown();
     
@@ -333,33 +378,28 @@
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
 
-    document.addEventListener('DOMContentLoaded', function() {
-    	
-			var elems = document.querySelectorAll('.modal');
-			var instances = M.Modal.init(elems, options);
+    
 		});
 
     
 
-   
-
-    
-    });
-
-    const twitter_icon = document.getElementById()
     
 
    
 
-   
-    
-    
-        
-        
-  
-
-    
+     
   </script>
-  <script></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    		options = []
+			var elems = document.querySelectorAll('.modal');
+			var instances = M.Modal.init(elems, options);
+		});
+    
+    
+</script>
+
+<script>"auth.js"</script>
 </body>
 </html>
